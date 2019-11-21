@@ -1,0 +1,28 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --disable-gpu .",
+    "build:linux": "electron-packager . iconGenerator --platform=linux --arch=x64 --out=dist/"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-packager": "^14.1.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.3.0",
+    "jimp": "^0.8.5"
+  }
+}

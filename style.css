@@ -1,0 +1,211 @@
+/* FONTS */
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("assets/fonts/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Medium-italic";
+    src: url("assets/fonts/Raleway/Raleway-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Thin";
+    src: url("assets/fonts/Raleway/Raleway-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("assets/fonts/Raleway/Raleway-Bold.ttf");
+}
+
+/* VARIABLES */
+:root {
+    --theme-bg-dark: #730202;
+    --font-color: #A63348;
+    --hover-bg: #D9663D;
+    --theme-bg-light: #F29544;
+    --desactived: #F2AE2E;
+
+    --header-height: 80px;
+    --padding: 30px;
+}
+
+/* CSS */
+body {
+    font-family: 'Raleway-Medium';
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-bg-light);
+    overflow: hidden;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--theme-bg-dark);
+    color: white;
+    font-family: 'Raleway-Bold';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    max-height: 850px;
+    border: 1px dashed var(--theme-bg-dark);
+    margin: calc(var(--padding) / 2);
+    background-color: white;
+}
+
+.sidebar {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: calc(100vh - (var(--header-height) + (2 * var(--padding))));
+    background-color: var(--theme-bg-light);
+    color: var(--theme-bg-dark);
+}
+
+.sidebar__upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: var(--padding);
+    border-bottom: 1px solid var(--font-color);
+}
+
+.toolkit--text {
+    font-size: 1.15em;
+    padding: var(--padding) 0 calc(var(--padding) / 2) 0;
+}
+
+.sidebar__upload__img {
+    width: 25%;
+    height: auto;
+    cursor: pointer;
+    padding: calc(var(--padding) / 2);
+    border-radius: 10px;
+    transition: background-color ease-out 200ms;
+}
+
+.sidebar__upload__img:hover {
+    background-color: var(--hover-bg);
+    transition: background-color ease-in 200ms;
+}
+
+.sidebar__toolkit__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar__toolkit__item-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.toolkit-bg__ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.toolkit-bg__color {
+    padding: 0;
+    border: none;
+    align-self: center;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-right: 10px;
+}
+
+.toolkit-bg__color-text {
+    font-family: 'Raleway-Medium-italic';
+}
+
+.toolkit-bg__color::-webkit-color-swatch-wrapper {
+    padding: 0;	
+}
+.toolkit-bg__color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+.toolkit-range {
+    width: 80%;
+    -webkit-appearance: none;
+    background: var(--theme-bg-dark);
+    transition: opacity 200ms;
+    cursor: pointer;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.toolkit-range::-webkit-slider-runnable-track {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.toolkit-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--theme-bg-light);
+    transform: translateY(-6px);
+    border-radius: 50%;
+    background: var(--theme-bg-dark);
+  }
+
+.sidebar__save {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: var(--padding) 0;
+    border-top: 1px solid var(--font-color);
+}
+
+.sidebar__save__btn {
+    padding: calc(var(--padding) / 2);
+    background-color: var(--theme-bg-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all ease-out 200ms;
+}
+
+.sidebar__save__btn:hover {
+    background-color: var(--hover-bg);
+    color: var(--theme-bg-dark);
+    transition: all ease-in 200ms;
+}
